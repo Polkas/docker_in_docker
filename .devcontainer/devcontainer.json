@@ -1,0 +1,14 @@
+{
+  "name": "My Data Science Environment",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "reditorsupport.r"
+  ],
+  "forwardPorts": [8888],
+  "postCreateCommand": "echo Welcome in My Data Science Environment"
+}
