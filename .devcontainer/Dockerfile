@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
-# RUN Rscript -e "install.packages('renv'); renv::restore()"
+RUN Rscript -e "install.packages('renv'); renv::restore()"
