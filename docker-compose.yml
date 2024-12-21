@@ -12,3 +12,18 @@ services:
     build: ./examples/py-shiny-app
     ports:
       - "3839:3838"
+
+  jupyterlab:
+    build: ./examples/jupyterlab
+    ports:
+      - "8888:8888"
+
+  rstudio:
+    build: ./examples/rstudio
+    ports:
+      - "8787:8787"
+
+  vscode:
+    build: ./examples/vscode
+    ports:
+      - "8080:8080"
