@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose the Shiny port
-EXPOSE 3838
+EXPOSE 3839
 
 # Command to run the Shiny app with specified host and port
-CMD ["shiny", "run", "app.py", "--host", "0.0.0.0", "--port", "3838"]
+CMD ["shiny", "run", "app.py", "--host", "0.0.0.0", "--port", "3839"]

@@ -36,12 +36,23 @@ jobs:
         sudo chmod +x /usr/local/bin/docker-compose
         docker-compose --version
 
-    - name: Build and run docker-compose
+    - name: Build and run docker-compose py-shiny-app
       run: |
-        docker-compose up -d
+        docker-compose up -d py-shiny-app
+        sleep 10
+        curl -f http://localhost:3839
+    - name: Build and run docker-compose r-shiny-app
+      run: |
+        docker-compose up -d r-shiny-app
         sleep 10
         curl -f http://localhost:3838
-        curl -f http://localhost:3839
+    - name: Build and run docker-compose jupyterlab
+      run: |
+        docker-compose up -d jupyterlab
+        sleep 10
         curl -f http://localhost:8888
+    - name: Build and run docker-compose rstudio
+      run: |
+        docker-compose up -d rstudio
+        sleep 10
         curl -f http://localhost:8787
-        curl -f http://localhost:8080
