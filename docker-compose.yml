@@ -11,8 +11,8 @@ services:
     ports:
       - "3839:3839"
 
-  jupyterlab:
-    build: ./examples/jupyterlab
+  jupyter:
+    build: ./examples/jupyter
     ports:
       - "8888:8888"
 

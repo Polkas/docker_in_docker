@@ -7,23 +7,26 @@ This project is part of a blog post and provides a playground to learn.
 
 ## Direct Play
 
-You can play with docker itself, like running:
+You can play with docker itself, like running in terminal:
 
 ```
+docker --help
 docker ps
 ```
 
-or you can reuse already existing images for Data Science:
+or you can reuse already existing images for Data Science.  
+Example of images from Jupyter.  
+[Here is the list of jupyter images with descriptions](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)
 
 ```
 
-# https://hub.docker.com/r/jupyter/scipy-notebook
+# https://quay.io/repository/jupyter/datascience-notebook
 # You can use specific tag (version)
-docker run -p 8888:8888 jupyter/scipy-notebook
+docker run -p 8888:8888 quay.io/jupyter/datascience-notebook
 
-# https://hub.docker.com/r/jupyter/tensorflow-notebook
+# https://quay.io/repository/jupyter/scipy-notebook
 # You can use specific tag (version)
-docker run -p 8888:8888 jupyter/tensorflow-notebook
+docker run -p 8888:8888 quay.io/jupyter/scipy-notebook
 
 ```
 
@@ -56,11 +59,11 @@ Press Control C in the terminal to close
 The current setup runs Shiny and Py Shiny apps on the server side. 
 The repository does not include any implementation for running Shiny apps using WebAssembly or Shiny Live on the client side.
 
-### JupyterLab
+### Jupyter scipy-notebook
 
-- Path: `examples/jupyterlab`
-- Description: An environment to run JupyterLab.
-- Command to run: `docker compose up --build jupyterlab`
+- Path: `examples/jupyter`
+- Description: An environment to run Jupyter.
+- Command to run: `docker compose up --build jupyter`
 
 Look for 8888 in the PORTS vscode tab, look for a token printed in the bottom of the terminal.
 

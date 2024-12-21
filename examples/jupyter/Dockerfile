@@ -1,5 +1,5 @@
 # Use the official Jupyter base image
-FROM jupyter/base-notebook:latest
+FROM quay.io/jupyter/scipy-notebook:latest
 
 # Set working directory to /workspace
 WORKDIR /workspace

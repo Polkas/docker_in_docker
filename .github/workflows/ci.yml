@@ -46,9 +46,9 @@ jobs:
         docker-compose up -d r-shiny-app
         sleep 10
         curl -f http://localhost:3838
-    - name: Build and run docker-compose jupyterlab
+    - name: Build and run docker-compose jupyter
       run: |
-        docker-compose up -d jupyterlab
+        docker-compose up -d jupyter
         sleep 10
         curl -f http://localhost:8888
     - name: Build and run docker-compose rstudio
