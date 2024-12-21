@@ -1,14 +1,11 @@
 # docker_in_docker
 
 An environment to play with docker and docker compose.
+Simply run the repository in the GitHub codespaces.
 
 This project is part of a blog post and provides a playground to learn.
 
 ## Examples
-
-## Note on Shiny and Py Shiny Apps
-
-The current setup runs Shiny and Py Shiny apps on the server side. The repository does not include any implementation for running Shiny apps using WebAssembly or Shiny Live on the client side. Switching to WebAssembly and Shiny Live would require significant changes to the current setup and codebase.
 
 ### Python Shiny App
 
@@ -29,6 +26,11 @@ Press Control C in the terminal to close
 Look for 3838 in the PORTS vscode tab
 
 Press Control C in the terminal to close
+
+### Note 
+
+The current setup runs Shiny and Py Shiny apps on the server side. 
+The repository does not include any implementation for running Shiny apps using WebAssembly or Shiny Live on the client side.
 
 ### JupyterLab
 
@@ -76,4 +78,4 @@ To add more users, simply follow the format and add new lines to the file.
 
 ## Continuous Integration with GitHub Actions
 
-This project includes a GitHub Actions CI workflow to automate the build and run process for all examples. The workflow is located in the `.github/workflows/ci.yml` file. It sets up Docker, builds and runs each example, and verifies that they work correctly. The workflow includes steps to build and run the `py-shiny-app`, `r-shiny-app`, `jupyterlab`, `rstudio`, and `vscode` examples, as well as the `docker-compose.yml` file to run all apps simultaneously.
+This project includes a GitHub Actions CI workflow to automate the build and run process for all examples. The workflow is located in the `.github/workflows/ci.yml` file. It sets up Docker, builds and runs each example, and verifies that they work correctly. The workflow run the all apps simultaneously by  `docker-compose.yml`.
