@@ -11,6 +11,7 @@ EXPOSE 8787
 RUN apt-get update && apt-get install -y python3
 
 # Add environment variables for RStudio login and password
+# The user-pw-list.txt file contains a list of users and their passwords
 COPY user-pw-list.txt /etc/rstudio/user-pw-list.txt
 COPY add_users.py /etc/rstudio/add_users.py
 RUN python3 /etc/rstudio/add_users.py

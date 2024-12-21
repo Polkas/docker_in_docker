@@ -32,6 +32,24 @@ This project is part of a blog post and provides a playground to learn.
 - Login: `rstudio`
 - Password: `rstudio`
 
+#### User-PW-List.txt
+
+The `user-pw-list.txt` file is used to manage user accounts for RStudio. It contains a list of users and their passwords in the following format:
+
+```
+username:password
+```
+
+Example:
+
+```
+rstudio:rstudio
+user1:password1
+user2:password2
+```
+
+To add more users, simply follow the format and add new lines to the file.
+
 ### VSCode
 
 - Path: `examples/vscode`
