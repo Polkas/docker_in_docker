@@ -1,0 +1,10 @@
+# List of users and passwords for RStudio
+
+# Example record
+rstudio:rstudio
+
+# To add more users, follow the format:
+# username:password
+# user1:password1
+# user2:password2
+# user3:password3
