@@ -1,3 +1,3 @@
-# r_dockerfile_codespace
+# docker_in_docker
 
-A simple r Dockerfile base codespace.
+An environment to play with docker.
