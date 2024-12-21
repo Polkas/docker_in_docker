@@ -30,44 +30,12 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-qemu-action@v1
 
-    - name: Build and run py-shiny-app
-      run: |
-        docker build -t py-shiny-app examples/py-shiny-app
-        docker run -d -p 3838:3838 py-shiny-app
-        sleep 10
-        curl -f http://localhost:3838
-
-    - name: Build and run r-shiny-app
-      run: |
-        docker build -t r-shiny-app examples/r-shiny-app
-        docker run -d -p 3838:3838 r-shiny-app
-        sleep 10
-        curl -f http://localhost:3838
-
-    - name: Build and run jupyterlab
-      run: |
-        docker build -t jupyterlab examples/jupyterlab
-        docker run -d -p 8888:8888 jupyterlab
-        sleep 10
-        curl -f http://localhost:8888
-
-    - name: Build and run rstudio
-      run: |
-        docker build -t rstudio examples/rstudio
-        docker run -d -p 8787:8787 rstudio
-        sleep 10
-        curl -f http://localhost:8787
-
-    - name: Build and run vscode
-      run: |
-        docker build -t vscode examples/vscode
-        docker run -d -p 8080:8080 vscode
-        sleep 10
-        curl -f http://localhost:8080
-
     - name: Build and run docker-compose
       run: |
         docker-compose up -d
         sleep 10
         curl -f http://localhost:3838
         curl -f http://localhost:3839
+        curl -f http://localhost:8888
+        curl -f http://localhost:8787
+        curl -f http://localhost:8080
