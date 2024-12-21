@@ -7,10 +7,13 @@ WORKDIR /workspace
 # Expose port 8787
 EXPOSE 8787
 
+# Install Python
+RUN apt-get update && apt-get install -y python3
+
 # Add environment variables for RStudio login and password
 COPY user-pw-list.txt /etc/rstudio/user-pw-list.txt
 COPY add_users.py /etc/rstudio/add_users.py
-RUN python /etc/rstudio/add_users.py
+RUN python3 /etc/rstudio/add_users.py
 
 # Command to start RStudio
 CMD ["rserver", "--server-daemonize", "0"]
