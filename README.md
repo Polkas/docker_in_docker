@@ -43,3 +43,7 @@ This project is part of a blog post and provides a playground to learn.
 - Path: `docker-compose.yml`
 - Description: A compose file to run both shiny apps, one in R and one in Python, at the same time.
 - Command to run: `docker-compose up`
+
+## Continuous Integration with GitHub Actions
+
+This project includes a GitHub Actions CI workflow to automate the build and run process for all examples. The workflow is located in the `.github/workflows/ci.yml` file. It sets up Docker, builds and runs each example, and verifies that they work correctly. The workflow includes steps to build and run the `py-shiny-app`, `r-shiny-app`, `jupyterlab`, `rstudio`, and `vscode` examples, as well as the `docker-compose.yml` file to run both Shiny apps simultaneously.
