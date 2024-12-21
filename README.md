@@ -47,3 +47,22 @@ This project is part of a blog post and provides a playground to learn.
 ## Continuous Integration with GitHub Actions
 
 This project includes a GitHub Actions CI workflow to automate the build and run process for all examples. The workflow is located in the `.github/workflows/ci.yml` file. It sets up Docker, builds and runs each example, and verifies that they work correctly. The workflow includes steps to build and run the `py-shiny-app`, `r-shiny-app`, `jupyterlab`, `rstudio`, and `vscode` examples, as well as the `docker-compose.yml` file to run all apps simultaneously.
+
+## Installing Docker Compose
+
+To install Docker Compose, follow these steps:
+
+1. Download the current stable release of Docker Compose:
+   ```sh
+   sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   ```
+
+2. Apply executable permissions to the binary:
+   ```sh
+   sudo chmod +x /usr/local/bin/docker-compose
+   ```
+
+3. Test the installation:
+   ```sh
+   docker-compose --version
+   ```
