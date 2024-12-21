@@ -16,9 +16,15 @@ docker ps
 or you can reuse already existing images for Data Science:
 
 ```
+
+# https://hub.docker.com/r/jupyter/scipy-notebook
+# You can use specific tag (version)
 docker run -p 8888:8888 jupyter/scipy-notebook
 
+# https://hub.docker.com/r/jupyter/tensorflow-notebook
+# You can use specific tag (version)
 docker run -p 8888:8888 jupyter/tensorflow-notebook
+
 ```
 
 ## Examples
