@@ -5,7 +5,25 @@ Simply run the repository in the GitHub codespaces.
 
 This project is part of a blog post and provides a playground to learn.
 
+## Direct Play
+
+You can play with docker itself, like running:
+
+```
+docker ps
+```
+
+or you can reuse already existing images for Data Science:
+
+```
+docker run -p 8888:8888 jupyter/scipy-notebook
+
+docker run -p 8888:8888 jupyter/tensorflow-notebook
+```
+
 ## Examples
+
+More challenging is to try to understand and work with Dockerfiles in examples.
 
 ### Python Shiny App
 
