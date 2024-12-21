@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  r-shiny-app:
+    build: ./examples/r-shiny-app
+    ports:
+      - "3838:3838"
+    depends_on:
+      - py-shiny-app
+
+  py-shiny-app:
+    build: ./examples/py-shiny-app
+    ports:
+      - "3839:3838"
