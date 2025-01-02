@@ -9,7 +9,7 @@ This project is part of a blog post and provides a playground to learn.
 
 You can play with docker itself, like running in terminal:
 
-```
+```bash
 docker --help
 docker ps
 ```
@@ -18,14 +18,16 @@ or you can reuse already existing images for Data Science.
 Example of images from Jupyter.  
 [Here is the list of jupyter images with descriptions](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)
 
-```
+```bash
 
 # https://quay.io/repository/jupyter/datascience-notebook
 # You can use specific tag (version)
+# docker run -p 8888:8888 quay.io/jupyter/datascience-notebook:2024-12-31
 docker run -p 8888:8888 quay.io/jupyter/datascience-notebook
 
 # https://quay.io/repository/jupyter/scipy-notebook
 # You can use specific tag (version)
+# docker run -p 8888:8888 quay.io/jupyter/scipy-notebook:2024-12-31
 docker run -p 8888:8888 quay.io/jupyter/scipy-notebook
 
 ```
