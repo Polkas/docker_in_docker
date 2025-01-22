@@ -85,7 +85,7 @@ Press Control C in the terminal to close
 - Description: An environment to run RStudio.
 - Command to run: `docker compose up --build rstudio`
 
-Look for 8888 in the PORTS vscode tab, Login: `rstudio` and Password: `rstudio`
+Look for 8787 in the PORTS vscode tab, Login: `rstudio` and Password: `rstudio`
 
 Press Control C in the terminal to close
 
