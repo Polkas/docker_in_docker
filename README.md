@@ -17,6 +17,9 @@ docker pull polkas/rdevdash-app:latest
 docker images
 docker run -p 3838:3838 polkas/rdevdash-app:latest
 docker stop $(docker ps -a -q)
+
+docker build examples/py-shiny-app/ -t py-shiny-app && docker images
+docker run -p 3839:3839 py-shiny-app
 ```
 
 or you can reuse already existing images for Data Science.  
@@ -108,7 +111,7 @@ To add more users, simply follow the format and add new lines to the file.
 
 - Path: `docker-compose.yml`
 - Description: A compose file to run all apps, including Shiny apps, JupyterLab, RStudio, at the same time.
-- Command to run: `docker compose up`
+- Command to run: `docker compose up` ; It can take more than 15+ minutes
 
 ## Continuous Integration with GitHub Actions
 
