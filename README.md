@@ -12,6 +12,11 @@ You can play with docker itself, like running in terminal:
 ```bash
 docker --help
 docker ps
+docker ps --help
+docker pull polkas/rdevdash-app:latest
+docker images
+docker run -p 3838:3838 polkas/rdevdash-app:latest
+docker stop $(docker ps -a -q)
 ```
 
 or you can reuse already existing images for Data Science.  
