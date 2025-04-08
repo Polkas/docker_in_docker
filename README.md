@@ -11,11 +11,12 @@ You can play with docker itself, like running in terminal:
 
 ```bash
 docker --help
-docker ps
-docker ps --help
+docker images
+docker images --help
 docker pull polkas/rdevdash-app:latest
 docker images
 docker run -p 3838:3838 polkas/rdevdash-app:latest
+docker ps
 docker stop $(docker ps -a -q)
 
 docker build examples/py-shiny-app/ -t py-shiny-app && docker images
