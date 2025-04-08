@@ -29,12 +29,12 @@ Example of images from Jupyter.
 ```bash
 
 # https://quay.io/repository/jupyter/datascience-notebook
-# You can use specific tag (version)
+# You can and should use specific tag (version)
 # docker run -p 8888:8888 quay.io/jupyter/datascience-notebook:2024-12-31
 docker run -p 8888:8888 quay.io/jupyter/datascience-notebook
 
 # https://quay.io/repository/jupyter/scipy-notebook
-# You can use specific tag (version)
+# You can and should use specific tag (version)
 # docker run -p 8888:8888 quay.io/jupyter/scipy-notebook:2024-12-31
 docker run -p 8888:8888 quay.io/jupyter/scipy-notebook
 

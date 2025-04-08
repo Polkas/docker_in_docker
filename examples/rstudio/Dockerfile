@@ -16,5 +16,8 @@ COPY user-pw-list.txt /etc/rstudio/user-pw-list.txt
 COPY add_users.py /etc/rstudio/add_users.py
 RUN python3 /etc/rstudio/add_users.py
 
+COPY testdir /home/rstudio/testdir
+VOLUME /home/rstudio/testdir
+
 # Command to start RStudio
 CMD ["rserver", "--server-daemonize", "0"]
