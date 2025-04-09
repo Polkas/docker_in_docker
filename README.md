@@ -10,16 +10,39 @@ This project is part of a blog post and provides a playground to learn.
 You can play with docker itself, like running in terminal:
 
 ```bash
+# Display help information for Docker (lists available commands and usage details)
 docker --help
+
+# List all Docker images currently available on your local system
 docker images
+
+# Display help information specifically for the 'docker images' command,
+# including options and usage details for listing images
 docker images --help
-docker pull polkas/rdevdash-app:latest
+
+# Pull the v0.2 version of the Docker image 'polkas/rdevdash-app' from a registry (e.g., Docker Hub)
+docker pull polkas/rdevdash-app:v0.2
+
+# List Docker images again to confirm that the new image has been downloaded to your system
 docker images
-docker run -p 3838:3838 polkas/rdevdash-app:latest
+
+# Run a container from the 'polkas/rdevdash-app:v0.2' image, mapping port 3838 on your host machine to port 3838 in the container.
+# This allows you to access services running inside the container via the host's IP on port 3838.
+docker run -p 3838:3838 polkas/rdevdash-app:v0.2
+
+# List all currently running containers to verify that the container has started
 docker ps
+
+# Stop all containers:
+#   'docker ps -a -q' fetches the IDs of all containers (running or stopped),
+#   and 'docker stop' stops them. This is a quick way to stop all running containers.
 docker stop $(docker ps -a -q)
 
+# Build a new Docker image using the Dockerfile located in the directory 'examples/py-shiny-app/'
+# Tag the image as 'py-shiny-app'. If the build is successful (&&), list all Docker images.
 docker build examples/py-shiny-app/ -t py-shiny-app && docker images
+
+# Run a container from the newly built 'py-shiny-app' image, mapping port 3839 on the host to port 3839 in the container.
 docker run -p 3839:3839 py-shiny-app
 ```
 
