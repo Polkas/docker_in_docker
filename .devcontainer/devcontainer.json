@@ -2,7 +2,7 @@
   "name": "Container Learning Environment",
   "dockerFile": "Dockerfile",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker::2.12": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2.12": {}
   },
   "postCreateCommand": "echo 'Welcome to the container training environment!'",
   "remoteUser": "vscode"
