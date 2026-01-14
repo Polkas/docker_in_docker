@@ -1,1 +1,1 @@
-FROM mcr.microsoft.com/devcontainers/base:latest
+FROM mcr.microsoft.com/devcontainers/base:bookworm
